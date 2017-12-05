@@ -11,10 +11,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.button)
-    Button kopce;
-    @BindView(R.id.textView)
-    TextView text;
+
     @BindView(R.id.pager)
     ViewPager pager;
     @BindView(R.id.tab)
@@ -31,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpViewPager(ViewPager pager) {
         MyPageAdapter adapter = new MyPageAdapter(this.getSupportFragmentManager());
+        adapter.addFragment(new Fragment1(), "tab 1");
+        adapter.addFragment(new Fragment2(), "tab 2");
+        adapter.addFragment(new Fragment3(), "tab 3");
+        adapter.addFragment(new Fragment4(), "tab 4");
 
         pager.setAdapter(adapter);
     }
