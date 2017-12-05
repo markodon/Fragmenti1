@@ -20,8 +20,9 @@
         android:text="@string/text2"/>
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="@dimen/image_height"
         android:layout_height="@dimen/image_height"
-        android:background="@drawable/husky"/>
+        android:src="@drawable/husky"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
